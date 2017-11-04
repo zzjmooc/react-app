@@ -1,0 +1,46 @@
+{
+  "plugins": [
+    "syntax-dynamic-import",
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    "transform-async-to-generator",
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": "css"
+      }
+    ],
+    [
+      "react-css-modules",
+      {
+        "generateScopedName": "[hash:base64:5]",
+        "webpackHotModuleReloading": true,
+        "filetypes": {
+          ".less": {
+            "syntax": "postcss-less"
+          }
+        }
+      }
+    ]
+  ],
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "chrome": 52,
+          "browsers": [
+            "last 2 versions",
+            "safari 7"
+          ]
+        },
+        "modules": false,
+        "loose": true
+      }
+    ],
+    "es2015",
+    "stage-0",
+    "react"
+  ]
+}
